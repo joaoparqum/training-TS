@@ -1,3 +1,5 @@
+import { Conta } from "./conta";
+
 class ContaPJ extends Conta{
 
     cnpj: number;

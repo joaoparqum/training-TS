@@ -1,3 +1,5 @@
+import { Conta } from "./conta";
+
 class ContaPF extends Conta{
 
     cpf: number;

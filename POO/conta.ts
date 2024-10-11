@@ -1,6 +1,7 @@
-abstract class Conta{
+export class Conta{
 
     private readonly _numeroDaConta: number;
+    @validaTitular
     titular: string;
     private _saldo: number;
 
@@ -14,6 +15,7 @@ abstract class Conta{
         return this._numeroDaConta;
     }
 
+    @analisaSaldo
     protected consultaSaldo(): number {
         return this._saldo;
     }
@@ -28,3 +30,8 @@ abstract class Conta{
 }
 
 //const primeiraConta = new Conta(1234, "João", 300.00);
+
+function analisaSaldo(target: any, key: any, descriptor: any) {}
+
+//decorator de propriedade
+function validaTitular(target: any, propertyKey: any) {}
